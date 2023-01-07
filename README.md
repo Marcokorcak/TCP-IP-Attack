@@ -41,9 +41,9 @@ containers created in this lab which were User1, User2, victim and the seed-atta
 
 user2 container has an IP of 10.9.0.7, while user1 has an IP address of 10.9.0.6 and the victim
 
-container has an IP address of 10.9.0.5. We used the commands “docker-compose build” and then
+container has an IP address of 10.9.0.5. I used the commands “docker-compose build” and then
 
-the “docker-compose up” command to build and start the containers. Once this was all done, we were
+the “docker-compose up” command to build and start the containers. Once this was all done, I was
 
 able to start the lab.
 
@@ -69,23 +69,23 @@ The image above shows that the SYN cookie countermeasure is turned off
 
 ## Task 1 Explanation
 
-For this part of the lab, we ran the dockps command to see which containers were currently running
+For this part of the lab, I ran the dockps command to see which containers were currently running
 
-on the virtual machine. Then, we did docksh seed-attacker to enter the attacker’s container to be
+on the virtual machine. Then, I did docksh seed-attacker to enter the attacker’s container to be
 
-used throughout the rest of this task. Then, we opened a separate tab in the terminal and entered
+used throughout the rest of this task. Then, I opened a separate tab in the terminal and entered
 
 the user 1 container using the following command, docksh user1-10.9.0.6. Following the same
 
-process, we opened up another tab in the terminal window and entered the victim’s container using
+process, I opened up another tab in the terminal window and entered the victim’s container using
 
-the docksh command again. In the victim’s container, we ran “sysctl -a | grep cookie” to display
+the docksh command again. In the victim’s container, I ran “sysctl -a | grep cookie” to display
 
 the SYN cookie flag and check if the SYN cookie countermeasure was turned off. Due to the SYN
 
-cookies having a value of 0, we confirmed that the SYN cookie countermeasure was turned off as
+cookies having a value of 0, I confirmed that the SYN cookie countermeasure was turned off as
 
-we expected.
+I expected.
 
 
 
@@ -138,41 +138,41 @@ The image above shows that the telnet login failed and the attack was successful
 
 For this part of the lab, the objective was to launch the SYN Flood attack using a python program,
 
-synflood.py. Using the code that was provided in the lab as a skeleton, we then expanded on it and
+synflood.py. Using the code that was provided in the lab as a skeleton, I then expanded on it and
 
-filled it out with the content needed in order to properly execute the attack. We used the command
+filled it out with the content needed in order to properly execute the attack. I used the command
 
-“ifconfig” to get the iface of our machine since that needed to be specified in our code. Next, we
+“ifconfig” to get the iface of our machine since that needed to be specified in our code. Next, I
 
 specified the destination port of 23 and the destination IP address of 10.9.0.5. Port 23 was used
 
 since this attack targeted the telnet protocol which runs through port 23 and the target IP address
 
-was 10.9.0.5 since that was the victim machine's IP address. Once this was filled out we ran the
+was 10.9.0.5 since that was the victim machine's IP address. Once this was filled out I ran the
 
 attack using the command “python3 synflood.py” and then went into another terminal to check if
 
-we were kicked out of the telnet connection to 10.9.0.5. When running this originally, the telnet
+I was kicked out of the telnet connection to 10.9.0.5. When running this originally, the telnet
 
 session was not canceled meaning that the attack was not successful. In order to run this attack
 
-successfully, we decided to look at possible issues that can contribute to the failure of this attack.
+successfully, I decided to look at possible issues that can contribute to the failure of this attack.
 
-When looking at the properties mentioned, we decided to look at the queue that takes in the
+When looking at the properties mentioned, I decided to look at the queue that takes in the
 
-packets. We ran the command “netstat -tna | grep SYN\_RECV | wc -l” which showed us the size
+packets. I ran the command “netstat -tna | grep SYN\_RECV | wc -l” which showed us the size
 
-of the queue, 97. Once we had the size of the queue we decided to lower the size of the queue in
+of the queue, 97. Once I had the size of the queue I decided to lower the size of the queue in
 
 order to make the attack work properly. This was important because the success rate of the attack
 
-can be affected by the number of half-open connections stored in the queue. We lowered the size
+can be affected by the number of half-open connections stored in the queue. I lowered the size
 
 of the queue to 30 using the command “sysctl -w net.ipv4.tcp\_max\_syn\_backlog=30” and when
 
-this was done the attack was carried out successfully. Once we had this size set, we ran the python
+this was done the attack was carried out successfully. Once I had this size set, I ran the python
 
-program and then tried to log into 10.9.0.5 (the victim) through telnet. When we tried logging into
+program and then tried to log into 10.9.0.5 (the victim) through telnet. When I tried logging into
 
 telnet it said that it was unable to connect to the remote host and that the connection timed out.
 
@@ -206,35 +206,35 @@ The image above shows that the telnet connection timed out and the attack was su
 
 The objective of this part of the lab was to launch the attack using a C program, synflood.c. Before
 
-running the program, we had to first restore the queue size to its original value by using the
+running the program, I had to first restore the queue size to its original value by using the
 
-following command, sysctl -w net.ipv4.tcp\_max\_syn\_backlog=130. We also flushed any of the
+following command, sysctl -w net.ipv4.tcp\_max\_syn\_backlog=130. I also flushed any of the
 
 past connections that were established to ensure that the attack would be successful. Then, since
 
 the C program was already created in the volumes directory and had all of the necessary
 
-information, all we had to do was compile the code using the following command before actually
+information, all I had to do was compile the code using the following command before actually
 
-executing it, gcc -o synflood synflood.c. We used telnet to connect to the victim’s container and
+executing it, gcc -o synflood synflood.c. I used telnet to connect to the victim’s container and
 
 then launched the attack from the attacker container by running the following command, synflood
 
-10.9.0.5 23. The connection timed out and we were unable to connect to the remote host,
+10.9.0.5 23. The connection timed out and I was unable to connect to the remote host,
 
 indicating that the attack using C was successful. When comparing this attack to the python
 
-program, we did not need to lower the queue size in order to get this attack to work. We ran the
+program, I did not need to lower the queue size in order to get this attack to work. I ran the
 
-C file with the original queue size of 130 and we also needed to compile this file in order to make
+C file with the original queue size of 130 and I also needed to compile this file in order to make
 
-it executable. For the python file we did not need to compile it and just used the command
+it executable. For the python file I did not need to compile it and just used the command
 
-“python3 synflood.py” to run the program. Additionally, we needed to stop the python program
+“python3 synflood.py” to run the program. Additionally, I needed to stop the python program
 
 from running by using the command “control c” whereas the C file ended on its own. This is
 
-because Python does not need a compiler while C does. The reason why we did not need to
+because Python does not need a compiler while C does. The reason why I did not need to
 
 change the queue size for the C file is because C is a lower-level compiled language which means
 
@@ -285,19 +285,19 @@ Successful login when running the attack
 
 The objective of this task was to enable the SYN cookie countermeasure and then run both
 
-attacks again. In order to turn on the countermeasures we ran the command “sysctl -w
+attacks again. In order to turn on the countermeasures I ran the command “sysctl -w
 
 net.ipv4.tcp\_syncookies=1”. Once this was done, the countermeasure was turned on and it was
 
-time to run both attacks. We first ran the python program using the command “python3
+time to run both attacks. I first ran the python program using the command “python3
 
 synflood.py” and then noticed that the connection was able to be established. When running this
 
-attack, when we lowered the size of the queue, the telnet connection would still be established.
+attack, when I lowered the size of the queue, the telnet connection would still be established.
 
-We flushed any previous connections that were made before carrying out the attack with the
+I flushed any previous connections that were made before carrying out the attack with the
 
-synflood.c file. Next, we ran the C program and waited a minute before we telnetted into the victim
+synflood.c file. Next, I ran the C program and waited a minute before I telnetted into the victim
 
 from the user. The connection was established with the victim, which was expected because the
 
@@ -305,11 +305,11 @@ SYN cookie countermeasure was turned on. When comparing the results of running t
 
 with the cookie countermeasure turned on and with it turned off, it is evident that the
 
-countermeasure impacted our results. Having the countermeasure turned off, we were able to run
+countermeasure impacted our results. Having the countermeasure turned off, I was able to run
 
 the attacks successfully meaning the telnet connection could not be established and it timed out.
 
-With the countermeasure turned on (SYN cookie set to 1), the attacks failed since we were able
+With the countermeasure turned on (SYN cookie set to 1), the attacks failed since I was able
 
 to establish a telnet connection with the victim.
 
@@ -336,21 +336,21 @@ The image above shows that we were kicked out of the telnet connection
 
 ## Task 2 Explanation
 
-In this task, the objective was to replicate a TCP RST attack on telnet connections. We were given
+In this task, the objective was to replicate a TCP RST attack on telnet connections. I was given
 
-a skeleton code where we needed to fill out the source and destination IP addresses. We also
+a skeleton code where I needed to fill out the source and destination IP addresses. I also
 
 needed the source and destination port of the tcp packets, along with their sequence numbers. In
 
-order to get all of this information we established a telnet connection using the command “telnet
+order to get all of this information I established a telnet connection using the command “telnet
 
-10.9.0.5” from the user-1 container. Once the connection was established, we loaded up
+10.9.0.5” from the user-1 container. Once the connection was established, I loaded up
 
 wireshark with the filter “host 10.9.0.5 and tcp port 23”. Setting this filter allowed us to capture any
 
 packets that fit these filter requirements and all of the relating information would be displayed.
 
-When in the telnet connection, we typed a singular letter and packets were received. We
+When in the telnet connection, I typed a singular letter and packets were received. I
 
 examined the last packet captured and used the sequence number that was displayed which was
 
@@ -358,19 +358,19 @@ examined the last packet captured and used the sequence number that was displaye
 
 examined because the next packets would be targeted for the attack to work so the most recent
 
-sequence number had to be noted. We set the source IP address to 10.9.0.6(user-1) and the
+sequence number had to be noted. I set the source IP address to 10.9.0.6(user-1) and the
 
 destination IP address to 10.9.0.5 (victim). The interface “br-20261b0ffb04” was used and this
 
 was obtained using the “ifconfig” command. With all of this information added to the synflood.py
 
-file, we were able to run the program using the command “python3 synflood.py”. When this file
+file, I was able to run the program using the command “python3 synflood.py”. When this file
 
 was running, Wireshark picked up packets with the RST label meaning the flag resets the
 
 connection and that the receiver should delete the connection. With all of these packets being
 
-picked up and sent, we got the message “Connection closed by foreign host” which means the
+picked up and sent, I got the message “Connection closed by foreign host” which means the
 
 attack was carried out successfully.
 
@@ -391,9 +391,9 @@ The image above shows the wireshark packets and telnet connection when running t
 
 For the extra credit portion of this task the objective was to carry out the RST attack automatically.
 
-In order to carry out this task automatically the file contents needed to be altered. We got all of
+In order to carry out this task automatically the file contents needed to be altered. I got all of
 
-the information relating to the packets being transferred by utilizing their properties. We used
+the information relating to the packets being transferred by utilizing their properties. I used
 
 “.dport” and “.sport” to get the destination and source port of the TCP packets being transferred.
 
@@ -443,9 +443,9 @@ In this task, a TCP session Hijacking attack was carried out and examined. The t
 
 an existing TCP session between two malicious victims by injecting malicious contents into the
 
-session. In order to carry out this attack we were given a skeleton code that needed to be filled in
+session. In order to carry out this attack I was given a skeleton code that needed to be filled in
 
-with information by us. To start off just like the previous tasks we needed to fill in the source and
+with information by us. To start off just like the previous tasks I needed to fill in the source and
 
 destination IP addresses as well as the source and destination port for the TCP packets.
 
@@ -455,7 +455,7 @@ When establishing a telnet connection and typing a singular letter, packets were
 
 wireshark and the information relating to the last captured packet was examined. Looking at the
 
-information provided by wireshark we noted that the sequence number of the last packet was
+information provided by wireshark I noted that the sequence number of the last packet was
 
 3551230592 and the acknowledgment number was 714261526. The destination and port was 23
 
@@ -463,27 +463,27 @@ since this was a telnet connection and the source port number was 55640. The sou
 
 was 10.9.0.6(user1) and the destination IP address was 10.9.0.5(victim). With all of this
 
-information noted, we needed to decide what “data” to enter, which is a command that will be
+information noted, I needed to decide what “data” to enter, which is a command that will be
 
-executed when the TCP session is hijacked. Before starting the attack we created a file named
+executed when the TCP session is hijacked. Before starting the attack I created a file named
 
 pswd.txt by using the command “touch pswd.txt”. This file would be deleted when this attack would
 
-be carried out and for this to be done successfully we entered “\r rm pswd.txt \r”. When the session
+be carried out and for this to be done successfully I entered “\r rm pswd.txt \r”. When the session
 
-was hijacked we would confirm it was carried out successfully if the file was deleted. The
+was hijacked I would confirm it was carried out successfully if the file was deleted. The
 
 command is surrounded by “\r” since that is an escape character for the carriage return meaning
 
 that it will separate the command from any other data that may be sent to the server from the
 
-user. This will ensure the command will run properly. Once all of this was done, we ran the file
+user. This will ensure the command will run properly. Once all of this was done, I ran the file
 
 using the “python3 synflood.py” command and when tracking the packets being sent on wireshark
 
 it can be seen that many of the packets are duplicates which made us unable to type anything in
 
-the telnet terminal. The telnet terminal froze and we loaded a new terminal where we logged into
+the telnet terminal. The telnet terminal froze and I loaded a new terminal where I logged into
 
 telnet and confirmed that the attack was successfully carried out by typing the command “ls” and
 
@@ -516,9 +516,9 @@ The image above shows that the file that was previously created is no longer ava
 
 In order to carry out this task automatically the file contents needed to be altered. Just like in the
 
-previous extra credit we got all of the information relating to the packets being transferred by
+previous extra credit I got all of the information relating to the packets being transferred by
 
-utilizing their properties. We used “.dport” and “.sport” to get the destination and source port of
+utilizing their properties. I used “.dport” and “.sport” to get the destination and source port of
 
 the TCP packets being transferred. This version of the attack copies port and IP source and
 
@@ -532,17 +532,17 @@ and sequence number + 1, 10.9.0.5 will always see this packet as the next in the
 
 packets being sent from the connecting client. The only difference is that our command that was
 
-passed in the data section was different. In this instance we created a file called test1.txt by
+passed in the data section was different. In this instance I created a file called test1.txt by
 
-running the command “touch test1.txt”. We added the code “\r rm test1.txt \r” so this command
+running the command “touch test1.txt”. I added the code “\r rm test1.txt \r” so this command
 
-would be executed when the file was run. We loaded a telnet connection and then ran the file
+would be executed when the file was run. I loaded a telnet connection and then ran the file
 
 which made the terminal freeze. Then loading a new terminal it was clear that the file was deleted
 
 and the attack worked. It can also be seen in the wireshark interface that there were many
 
-duplicate packets sent which made the terminal freeze which is what we wanted.
+duplicate packets sent which made the terminal freeze which is what I wanted.
 
 
 
@@ -569,23 +569,23 @@ Listening to port 9090 and then connecting to the victim machine
 
 For this last task of the lab, the objective was to create a reverse shell using TCP session
 
-hijacking. We first used the docksh command to enter the container for user1 and then used telnet
+hijacking. I first used the docksh command to enter the container for user1 and then used telnet
 
 to connect to 10.9.0.5, which is the victim. After the connection was established between the
 
-victim and user1, we opened a new tab in the terminal and used “docksh seed-attacker” to enter
+victim and user1, I opened a new tab in the terminal and used “docksh seed-attacker” to enter
 
-the container for the attacker. Using netcat, or nc for short, we listened on port 9090 for the
+the container for the attacker. Using netcat, or nc for short, I listened on port 9090 for the
 
-connection with 10.9.0.5. We ran the python3 program and in the terminal window with the telnet
+connection with 10.9.0.5. I ran the python3 program and in the terminal window with the telnet
 
-connection we typed any letter, so that some action is taking place on the IP 10.9.0.5. After doing
+connection I typed any letter, so that some action is taking place on the IP 10.9.0.5. After doing
 
 so, the reverse shell executed and now the shell runs on 10.9.0.5, which is indicated in the
 
 screenshot above by “Connection received on 10.9.0.5 41512”. In this terminal window, it said
 
-“seed@4c4f9f0bb001”, which is the identifier for the victim’s container. Therefore, we successfully
+“seed@4c4f9f0bb001”, which is the identifier for the victim’s container. Therefore, I successfully
 
 launched the attack on the target machine and created a reverse shell using TCP session
 
