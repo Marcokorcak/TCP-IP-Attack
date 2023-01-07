@@ -38,11 +38,19 @@ able to start the lab.
 
 # Task 1: SYN Flood Attack
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121285-a1015b87-bfc9-493e-ae69-79e9947918bd.PNG" width=70% height=70%>
+
 The image above shows us logging into the attacker container
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121302-5419aa89-a2fb-4e8e-8747-cca7db58d7ff.PNG" width=70% height=70%>
 
 The image above shows us logging into the user1 container
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121315-ec7e323c-e6cf-4483-bdf7-ae660dc67aca.PNG" width=70% height=70%>
+
 The image above shows us logging into the victim container
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121335-86352818-0d23-4d23-b36e-2bdd1408416b.PNG" width=70% height=70%>
 
 The image above shows that the SYN cookie countermeasure is turned off
 
