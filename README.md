@@ -403,15 +403,22 @@ be carried out automatically without having to manually enter information.
 
 # Task 3: TCP Session Hijacking
 
-The image above shows the file content for task 3
+<img src= "https://user-images.githubusercontent.com/77298953/211123086-4630ae09-e0ce-4329-a796-23773510387b.PNG" width=70% height=70%>
 
 The image above shows us making a file named “pswd.txt”
 
+<img src= "https://user-images.githubusercontent.com/77298953/211123098-9fc747ff-252b-462c-9aa9-3044be2ee149.PNG" width=70% height=70%>
+
 The image above shows the wireshark interface and the information related to the packets being transmitted
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123118-b923eb51-be1d-4286-8aa8-df451bf0b6de.PNG" width=70% height=70%>
 
 The image above shows the packets and errors being thrown when the attack is being carried out
 
+<img src= "https://user-images.githubusercontent.com/77298953/211123221-6b412dc2-2d65-483b-bc7b-f12081374e20.PNG" width=70% height=70%>
+
 The image above shows that the text file was deleted when logging into telnet again on a new terminal
+
 
 
 ## Task 3 Explanation
