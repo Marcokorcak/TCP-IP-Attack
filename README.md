@@ -169,13 +169,23 @@ Consequently, a connection could not be established and the attack was carried o
 
 # Task 1.2 C file
 
+<img src= "https://user-images.githubusercontent.com/77298953/211122090-ce9cc81a-e6a0-4320-955c-0c95d9fc4083.PNG" width=70% height=70%>
+
 Restoring the queue size and setting it to 130
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122103-73dc29d4-488d-4cd0-9c98-1e8b50fa25d0.PNG" width=70% height=70%>
 
 The image above shows the synflood.c file and then compiling the file for later use
 
+<img src= "https://user-images.githubusercontent.com/77298953/211122116-9b2199bd-44fc-474e-8ba9-b45435716122.PNG" width=70% height=70%>
+
 The image above shows that the file was compiled
 
+<img src= "https://user-images.githubusercontent.com/77298953/211122130-adf6b76d-18b7-4f99-899e-afb5d9ba7667.PNG" width=70% height=70%>
+
 The image above shows us running synflood file and targeting the 10.9.0.5 IP with port 23
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122150-492ea4f2-bc29-40cd-8cef-90eca68ee048.PNG" width=70% height=70%>
 
 The image above shows that the telnet connection timed out and the attack was successful
 
