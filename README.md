@@ -19,7 +19,19 @@ In this lab, students will conduct several attacks on TCP. This lab covers the f
 * A special type of TCP attack, the Mitnick attack, is covered in a separate lab. 
 
 
-# Lab Environment Setup
+## Table of contents
+* [Lab Setup](#Lab-Setup)
+* [Task 1 SYN Flooding Attack](#Task-1-SYN-Flooding-Attack)
+* [Task 1-1 Launching the Attack Using Python](#Task-1-1-Launching-the-Attack-Using-Python)
+* [Task 1-2 Launch the Attack Using C](#Task-1-2-Launch-the-Attack-Using-C)
+* [Task 1-3 Enable the SYN Cookie Countermeasure](#Task-1-3-Enable-the-SYN-Cookie-Countermeasure)
+* [Task 2 TCP RST Attacks on telnet Connections](#Task-2-TCP-RST-Attacks-on-telnet-Connections)
+* [Task 2 TCP RST Attacks on telnet Connections Automatically](#Task-2-TCP-RST-Attacks-on-telnet-Connections-Automatically)
+* [Task 3 TCP Session Hijacking](#Task-3-TCP-Session-Hijacking)
+* [Task 3 TCP Session Hijacking Automatically](#Task-3-TCP-Session-Hijacking-Automatically)
+* [Task 4 Creating Reverse Shell using TCP Session Hijacking](#Task-4-Creating-Reverse-Shell-using-TCP-Session-Hijacking)
+
+# Lab Setup
 
 <img src= "https://user-images.githubusercontent.com/77298953/211121139-7abbc891-25d6-4e16-822f-eaf8ce71d6a9.PNG" width=70% height=70%>
 
@@ -36,7 +48,7 @@ the “docker-compose up” command to build and start the containers. Once this
 able to start the lab.
 
 
-# Task 1: SYN Flood Attack
+# Task 1 SYN Flooding Attack
 
 <img src= "https://user-images.githubusercontent.com/77298953/211121285-a1015b87-bfc9-493e-ae69-79e9947918bd.PNG" width=70% height=70%>
 
@@ -79,7 +91,7 @@ we expected.
 
 
 
-# Task 1.1: Launching the Attack Using Python
+# Task 1-1 Launching the Attack Using Python
 
 <img src= "https://user-images.githubusercontent.com/77298953/211121660-274682e2-a49f-49dd-aa28-3a7d2aa5e647.PNG" width=70% height=70%>
 
@@ -122,7 +134,7 @@ The image above shows the packets that go through when running the attack
 The image above shows that the telnet login failed and the attack was successful
 
 
-## Task 1.1 Explanation
+## Task 1-1 Explanation
 
 For this part of the lab, the objective was to launch the SYN Flood attack using a python program,
 
@@ -167,7 +179,7 @@ telnet it said that it was unable to connect to the remote host and that the con
 Consequently, a connection could not be established and the attack was carried out successfully.
 
 
-# Task 1.2 C file
+# Task 1-2 Launch the Attack Using C
 
 <img src= "https://user-images.githubusercontent.com/77298953/211122090-ce9cc81a-e6a0-4320-955c-0c95d9fc4083.PNG" width=70% height=70%>
 
@@ -190,7 +202,7 @@ The image above shows us running synflood file and targeting the 10.9.0.5 IP wit
 The image above shows that the telnet connection timed out and the attack was successful
 
 
-## Task 1.2 Explanation
+## Task 1-2 Explanation
 
 The objective of this part of the lab was to launch the attack using a C program, synflood.c. Before
 
@@ -234,7 +246,7 @@ than the C file in a certain amount of time.
 
 
 
-# Task 1.3
+# Task 1-3 Enable the SYN Cookie Countermeasure
 
 <img src= "https://user-images.githubusercontent.com/77298953/211122428-63c9bb79-6fbd-4ea1-bb0a-3fee8046a64e.PNG" width=70% height=70%>
 
@@ -269,7 +281,7 @@ Lowering the queue to 30
 Successful login when running the attack
 
 
-## Task 1.3 Explanation
+## Task 1-3 Explanation
 
 The objective of this task was to enable the SYN cookie countermeasure and then run both
 
@@ -303,7 +315,7 @@ to establish a telnet connection with the victim.
 
 
 
-# Task 2: TCP RST Attacks on telnet Connections
+# Task 2 TCP RST Attacks on telnet Connections
 
 <img src= "https://user-images.githubusercontent.com/77298953/211122844-cf47b7e7-54c4-4fe3-b3a9-b38d0d378bec.PNG" width=70% height=70%>
 
@@ -364,7 +376,7 @@ attack was carried out successfully.
 
 
 
-# Launching the attack automatically
+# Task 2 TCP RST Attacks on telnet Connections Automatically
 
 <img src= "https://user-images.githubusercontent.com/77298953/211122945-c739547c-af2c-4150-bcda-546c6570922c.PNG" width=70% height=70%>
 
@@ -401,7 +413,7 @@ be carried out automatically without having to manually enter information.
 
 
 
-# Task 3: TCP Session Hijacking
+# Task 3 TCP Session Hijacking
 
 <img src= "https://user-images.githubusercontent.com/77298953/211123344-5ce366a3-8dc6-46fd-b8d7-ff6a1f5c68a3.PNG" width=70% height=70%>
 
@@ -481,7 +493,7 @@ carried out properly.
 
 
 
-# Optional (1 bonus point): Launching the attack automatically.
+# Task 3 TCP Session Hijacking Automatically
 
 <img src= "https://user-images.githubusercontent.com/77298953/211123483-309c63ee-9c16-43a6-beeb-98f0da19e128.PNG" width=70% height=70%>
 
@@ -534,7 +546,7 @@ duplicate packets sent which made the terminal freeze which is what we wanted.
 
 
 
-# Task 4: Creating Reverse Shell using TCP Session Hijacking
+# Task 4 Creating Reverse Shell using TCP Session Hijacking
 
 <img src= "https://user-images.githubusercontent.com/77298953/211123628-38b3cd6b-40e9-44e3-84e7-fc442ef9cc83.PNG" width=70% height=70%>
 
