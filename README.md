@@ -21,6 +21,7 @@ In this lab, students will conduct several attacks on TCP. This lab covers the f
 
 # Lab Environment Setup
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121139-7abbc891-25d6-4e16-822f-eaf8ce71d6a9.PNG" width=70% height=70%>
 
 For this lab, the only setup that was needed was to set up the docker containers. There were four
 
