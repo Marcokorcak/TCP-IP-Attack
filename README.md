@@ -483,11 +483,19 @@ carried out properly.
 
 # Optional (1 bonus point): Launching the attack automatically.
 
+<img src= "https://user-images.githubusercontent.com/77298953/211123483-309c63ee-9c16-43a6-beeb-98f0da19e128.PNG" width=70% height=70%>
+
 The image above shows the file content for carrying out the attack automatically
 
-The image above shows us creating a text file called test1.txt**
+<img src= "https://user-images.githubusercontent.com/77298953/211123501-7a6c5888-fae1-4a67-b67a-90e3a4590854.PNG" width=70% height=70%>
+
+The image above shows us creating a text file called test1.txt
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123511-f1a78ecd-3d6e-4d3f-8886-48a70839175c.PNG" width=70% height=70%>
 
 The image above shows the packets that were being transmitted when the attack was taking place
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123528-04ad8a6c-74ad-4a9d-a84d-bca4d925341f.PNG" width=70% height=70%>
 
 The image above shows that the file that was previously created is no longer available
 
