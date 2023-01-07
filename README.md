@@ -536,11 +536,19 @@ duplicate packets sent which made the terminal freeze which is what we wanted.
 
 # Task 4: Creating Reverse Shell using TCP Session Hijacking
 
+<img src= "https://user-images.githubusercontent.com/77298953/211123628-38b3cd6b-40e9-44e3-84e7-fc442ef9cc83.PNG" width=70% height=70%>
+
 Content files of the synflood.py file
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123639-ff156245-6473-444f-949e-fb9f40ac5d14.PNG" width=70% height=70%>
 
 Establishing a telnet connection
 
+<img src= "https://user-images.githubusercontent.com/77298953/211123658-aaeb1d28-a4a2-4660-979a-56d3d7a887de.PNG" width=70% height=70%>
+
 Executing the python program
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123669-632729cf-8b5c-4834-b97d-9f13d717fc9e.PNG" width=70% height=70%>
 
 Listening to port 9090 and then connecting to the victim machine
 
