@@ -403,7 +403,11 @@ be carried out automatically without having to manually enter information.
 
 # Task 3: TCP Session Hijacking
 
-<img src= "https://user-images.githubusercontent.com/77298953/211123086-4630ae09-e0ce-4329-a796-23773510387b.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211123344-5ce366a3-8dc6-46fd-b8d7-ff6a1f5c68a3.PNG" width=70% height=70%>
+
+The image above shows the file content for task 3
+
+<img src= "https://user-images.githubusercontent.com/77298953/211123361-dec7f2c5-8074-42eb-82c8-d2ff1f3870be.PNG" width=70% height=70%>
 
 The image above shows us making a file named “pswd.txt”
 
