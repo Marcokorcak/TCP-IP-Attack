@@ -364,9 +364,13 @@ attack was carried out successfully.
 
 
 
-# Launching the attack automatically.
+# Launching the attack automatically
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122945-c739547c-af2c-4150-bcda-546c6570922c.PNG" width=70% height=70%>
 
 The image above shows the file contents of synflood.py for the extra credit
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122966-7f759043-3cdc-4402-b54f-1f7dff31431a.PNG" width=70% height=70%>
 
 The image above shows the wireshark packets and telnet connection when running the code
 
