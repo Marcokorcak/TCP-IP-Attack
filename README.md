@@ -101,14 +101,23 @@ The image above shows the contents of the synflood.py file
 
 Output when running the netstat -tna command
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121908-607a188d-a02d-486e-aea6-e862376f8ed2.PNG" width=70% height=70%>
 
 The image above shows that the telnet login worked when executing the file, meaning that the attack was not successful
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121925-57eb10e4-5292-4419-8c22-427c6d28cc67.PNG" width=70% height=70%>
+
 The image above shows the original size of the queue
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121940-a6aa9178-d2ac-428f-817f-a5b601a51d29.PNG" width=70% height=70%>
 
 The image above shows us lowering the queue to 30 so that the attack could be carried out successfully
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121957-e48ecddc-6831-47f7-9d48-579e58705208.PNG" width=70% height=70%>
+
 The image above shows the packets that go through when running the attack
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121979-7084a208-f12f-401b-a284-0dac67b417db.PNG" width=70% height=70%>
 
 The image above shows that the telnet login failed and the attack was successful
 
