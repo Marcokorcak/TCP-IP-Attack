@@ -81,15 +81,26 @@ we expected.
 
 # Task 1.1: Launching the Attack Using Python
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121660-274682e2-a49f-49dd-aa28-3a7d2aa5e647.PNG" width=70% height=70%>
+
 The image above shows us logging into the user1 container and then using telnet to get into the victim machine
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121697-df7035ea-e671-4ecc-bf10-51a15f5fcdbd.PNG" width=70% height=70%>
 
 The image above shows us using the netstat -nat command which shows that the telnet connection was established
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121724-c770eb52-f9f5-4fab-ace4-faee0c7f452b.PNG" width=70% height=70%>
+
 The image above shows what command was used in order to get the iface that will be used throughout the lab
+
+<img src= "https://user-images.githubusercontent.com/77298953/211121740-20a1ca74-5204-4680-837a-beabe56876e2.PNG" width=70% height=70%>
 
 The image above shows the contents of the synflood.py file
 
+<img src= "https://user-images.githubusercontent.com/77298953/211121766-1952bcef-739d-4033-9abc-b0726cb27352.PNG" width=70% height=70%>
+
 Output when running the netstat -tna command
+
 
 The image above shows that the telnet login worked when executing the file, meaning that the attack was not successful
 
