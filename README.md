@@ -305,11 +305,19 @@ to establish a telnet connection with the victim.
 
 # Task 2: TCP RST Attacks on telnet Connections
 
+<img src= "https://user-images.githubusercontent.com/77298953/211122844-cf47b7e7-54c4-4fe3-b3a9-b38d0d378bec.PNG" width=70% height=70%>
+
 The image above shows the file contents of synflood.py file
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122858-b9617b84-495e-4067-b8c9-62ca032b320f.PNG" width=70% height=70%>
 
 The image above shows the filter that was used on wireshark
 
+<img src= "https://user-images.githubusercontent.com/77298953/211122866-b0ee9f65-5a18-43af-86b9-4a54e6a1b589.PNG" width=70% height=70%>
+
 The image above shows the necessary information needed such as sequence number, destination port, source port of packets
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122878-27e26c50-1640-464c-b5c8-385baed37782.PNG" width=70% height=70%>
 
 The image above shows that we were kicked out of the telnet connection
 
