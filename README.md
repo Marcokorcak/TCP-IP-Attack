@@ -244,25 +244,27 @@ The image above shows that the SYN cookie counter measure was turned on
 
 The image above shows that the telnet login to 10.9.0.5 was successful
 
-<img src= "https://user-images.githubusercontent.com/77298953/211122464-101a2c9d-055b-4006-9354-56067fa6d29d.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211122724-85ab965e-59d4-477f-a79d-28e3bbac39e2.PNG" width=70% height=70%>
 
 The image above shows that packets were being transmitted
 
-<img src= "https://user-images.githubusercontent.com/77298953/211122514-11cd5823-670d-43e3-b55e-94d86d37cc99.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211122464-101a2c9d-055b-4006-9354-56067fa6d29d.PNG" width=70% height=70%>
 
 Running the synflood attack
 
-<img src= "https://user-images.githubusercontent.com/77298953/211122544-e1ee42c6-d161-46a2-b315-b2e17dd38c51.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211122514-11cd5823-670d-43e3-b55e-94d86d37cc99.PNG" width=70% height=70%>
 
 Successful login to telnet with the C file
 
-<img src= "https://user-images.githubusercontent.com/77298953/211122570-295c807f-72cb-4fe7-8d10-84be729c4306.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211122544-e1ee42c6-d161-46a2-b315-b2e17dd38c51.PNG" width=70% height=70%>
 
 Running the python file
 
-<img src= "https://user-images.githubusercontent.com/77298953/211122599-2ddd0705-937f-4acf-97cc-b9805750494a.PNG" width=70% height=70%>
+<img src= "https://user-images.githubusercontent.com/77298953/211122570-295c807f-72cb-4fe7-8d10-84be729c4306.PNG" width=70% height=70%>
 
 Lowering the queue to 30
+
+<img src= "https://user-images.githubusercontent.com/77298953/211122599-2ddd0705-937f-4acf-97cc-b9805750494a.PNG" width=70% height=70%>
 
 Successful login when running the attack
 
